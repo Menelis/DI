@@ -17,14 +17,14 @@ namespace DI.Common.Interfaces
         {
             _items.Add(entity);
         }
-        public  IList<T> ListAllOrAny(Expression<Func<T, bool>> where = null)
+        public  IList<T> ListAllOrAny(ISpecification<T> criteria = null)
         {
-            return where == null ? _items : _items.AsQueryable().Where(where).ToList();
+            return criteria == null ? _items : _items.AsQueryable().Where(criteria.Filter).ToList();
         }
 
-        public T Get(Expression<Func<T, bool>> where)
+        public T Get(ISpecification<T> criteria)
         {
-            return ListAllOrAny(where).FirstOrDefault();
+            return ListAllOrAny(criteria).FirstOrDefault();
         }
     }
 }

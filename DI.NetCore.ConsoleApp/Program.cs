@@ -1,4 +1,5 @@
 ﻿using DI.Common.Entities;
+using DI.Common.Specifications;
 using DI.NetCore.Core.Gateways.Interfaces;
 using DI.NetCore.Core.Gateways.Repositories;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,8 +23,7 @@ namespace DI.NetCore.ConsoleApp
 
             _productRepository.Add(new Product { Id = new Guid("7292C4C1-A100-4FC1-90BD-1F4D74365A60"), Name = "New item from client side" });
 
-            var itemAdded = _productRepository.Get(where: x => x.Id == new Guid("7292C4C1-A100-4FC1-90BD-1F4D74365A60"));
-
+            var itemAdded = _productRepository.Get(new ProductSpecification(p => p.Id == new Guid("7292C4C1-A100-4FC1-90BD-1F4D74365A60")));
             Console.WriteLine("End of item from Seed");
             Console.WriteLine("---------New item added into seed data-------------------");
             Console.WriteLine(@"ID--------------------------------------------------------------Name");

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Autofac;
 using DI.Common.Entities;
+using DI.Common.Specifications;
 using DI.Framework.Core.Gateways.Interfaces;
 using DI.Framework.Core.Gateways.Repositories;
 
@@ -23,7 +24,7 @@ namespace DI.Framework.ConsoleApp
 
             _productRepository.Add(new Product { Id = new Guid("7292C4C1-A100-4FC1-90BD-1F4D74365A60"), Name = "New item from client side" });
 
-            var itemAdded = _productRepository.Get(where: x => x.Id == new Guid("7292C4C1-A100-4FC1-90BD-1F4D74365A60"));
+            var itemAdded = _productRepository.Get(new ProductSpecification(p => p.Id == new Guid("7292C4C1-A100-4FC1-90BD-1F4D74365A60")));
 
             Console.WriteLine("End of item from Seed");
             Console.WriteLine("-----------------------------------------------------------------------------------------------------");
