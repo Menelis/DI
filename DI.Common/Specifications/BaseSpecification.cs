@@ -12,6 +12,6 @@ namespace DI.Common.Specifications
         {
             Filter = filter;
         }
-        public Expression<Func<T, bool>> Filter { get; set; }
+        public Expression<Func<T, bool>> Filter { get; }
     }
 }
