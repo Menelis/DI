@@ -25,9 +25,9 @@ namespace DI.NetCore.ConsoleApp
             var itemAdded = _productRepository.Get(where: x => x.Id == new Guid("7292C4C1-A100-4FC1-90BD-1F4D74365A60"));
 
             Console.WriteLine("End of item from Seed");
-            Console.WriteLine("-----------------------------------------------------------------------------------------------------");
+            Console.WriteLine("---------New item added into seed data-------------------");
             Console.WriteLine(@"ID--------------------------------------------------------------Name");
-            Console.WriteLine($"{itemAdded.Id}---------------------------------${itemAdded.Name}");
+            Console.WriteLine($"{itemAdded.Id}---------------------------------{itemAdded.Name}");
             Console.ReadLine();
         }
         static ServiceProvider ServiceProvider
