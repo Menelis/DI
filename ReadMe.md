@@ -22,4 +22,4 @@ This is simple Depencency Injection with no database just seeding with normal li
 
 
 
-			
+			![Image of Testing]https://github.com/Menelis/DI/blob/master/DI.Common/images/test.PNG
