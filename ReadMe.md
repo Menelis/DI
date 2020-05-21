@@ -20,6 +20,4 @@ This is simple Depencency Injection with no database just seeding with normal li
 					  - A .Net Core Console App for testing Dependency Injection using Microsoft.Extensions.DependencyInjection
 
 
-
-![Image of Testing]
-(https://github.com/Menelis/DI/blob/master/DI.Common/images/test.PNG)
+![Image of Yaktocat](https://github.com/Menelis/DI/blob/master/DI.Common/images/test.PNG)
