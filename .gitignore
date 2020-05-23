@@ -338,8 +338,3 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-
-# Ignore everything in this directory
-*
-# Except this file
-!.gitignore
