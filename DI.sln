@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{78D0C241-7F34-4B51-A526-1B1DDE54AA8F}"
-	ProjectSection(SolutionItems) = preProject
-		.keep = .keep
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI.Common", "DI.Common\DI.Common.csproj", "{CB62777A-418C-4B8D-A6F5-9BA7A1EE8A8F}"
 EndProject
